@@ -60,9 +60,25 @@
         let nomina4=[];
         function inv(){
             let v1=document.getElementById("pro").value;
+            while (!/^[a-z]+$/.test(v1)) {
+            alert("Ingresa solo texto en el cuadro Producto.");
+            document.getElementById("pro").value.focus();
+            }
             let v2=document.getElementById('fam').value;
+            while (!/^[a-z]+$/.test(v2)) {
+            alert("Ingresa solo texto en el cuadro Familia del Item.");
+            document.getElementById("fam").value.focus();
+            }
             let v3=parseInt(document.getElementById('val').value);
+            while (!/^[0-9]+$/.test(v3)) {
+            alert("Ingresa solo numeros en el cuadro Valor.");
+            document.getElementById("val").value.focus();
+            }
             let v4=parseInt(document.getElementById('can').value);
+            while (!/^[0-9]+$/.test(v4)) {
+            alert("Ingresa solo numeros en el cuadro Cantidad.");
+            document.getElementById("can").value.focus();
+            }
             nomina.push(v1);
             nomina2.push(v2);
             nomina3.push(v3);
